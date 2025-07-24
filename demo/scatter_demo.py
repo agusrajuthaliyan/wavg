@@ -1,5 +1,9 @@
 import pandas as pd
-from main import Vizu # Assuming the class is in main.py
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from wavg.wavg import Vizu # Assuming the class is in main.py
 
 # --- 1. Create Sample Data for Animated Scatter ---
 # This type of chart works best with "long" format data, where each
@@ -39,5 +43,5 @@ scatter_visualizer.create_animated_scatter(
     x_label="Market Share (%)",
     y_label="Customer Satisfaction",
     size_scale=0.1,  # Adjust this to get appropriately sized bubbles
-    output_filename="tech_growth_scatter.gif"
+    output_filename="demo/files/tech_growth_scatter.gif"
 )
