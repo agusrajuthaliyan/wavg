@@ -1,5 +1,9 @@
 import pandas as pd
-from main import Vizu # Assuming the class is in main.py
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from wavg.wavg import Vizu # Assuming the class is in main.py
 
 # --- 1. Create Sample Data ---
 # In a real-world scenario, you would load your data from a CSV or other source.
@@ -32,5 +36,5 @@ visualizer.create_bar_chart_race(
     time_start=1980,
     time_end=2020,
     title="Top 10 Most Populous Cities",
-    output_filename="files/city_population_race.gif"
+    output_filename="demo/files/city_population_race.gif"
 )
